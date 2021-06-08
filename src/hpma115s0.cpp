@@ -93,7 +93,7 @@ bool HPMA115S0::read (float *p25, float *p10)
     byte CS = hpmport.read();      
     // Now we shall verify the checksum
     if (((0x10000 - HEAD - LEN - COMD - DF1 - DF2 - DF3 - DF4) % 0XFF) != CS){
-      Serial.println("Checksum fail");
+//       Serial.println("Checksum fail");
       return 0;
     }
     else
